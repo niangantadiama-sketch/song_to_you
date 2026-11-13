@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Des petits mots pour toi ✨</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="container">
+    <span class="badge">Un peu de force 🤍</span>
+    <h1>Ne te décourage pas</h1>
+
+    <div class="quote-card">
+      <p id="quote-display" class="quote-text">"Chargement d'un mot doux..."</p>
+    </div>
+
+    <button id="btn-new-quote" class="next-quote-btn">Suivant✨</button>
+
+    <a href="index.html" class="back-link">← Retourner à la musique</a>
+  </main>
+
+  <script>
+    // Ta liste de citations et messages motivants
+    const quotes = [
+      "Ne te décourage surtout pas. Tu es la meilleure dans ce que tu fais, et tu vas y arriver ! 💪✨",
+      "Même les jours où c'est plus dur, rappelle-toi tout le chemin que tu as déjà parcouru. Tu assures un max.",
+      "Prends une grande inspiration. Tu as le talent, la force et tout ce qu'il faut pour réussir. Don't give up ! 🤍",
+      "Tu es capable de déplacer des montagnes. Crois en toi autant que je crois en toi.",
+      "Chaque petit pas te rapproche de tes rêves. Ne lâche rien, tu es sur la bonne voie !",
+      "Rappelle-toi que tu es plus forte que tu ne le penses, plus intelligente que tu ne le crois, et capable de tout."
+    ];
+
+    const quoteDisplay = document.getElementById('quote-display');
+    const btnNewQuote = document.getElementById('btn-new-quote');
+
+    let lastIndex = -1;
+
+    function showRandomQuote() {
+      let randomIndex;
+      // Évite de tomber deux fois de suite sur la même citation
+      do {
+        randomIndex = Math.floor(Math.random() * quotes.length);
+      } while (randomIndex === lastIndex);
+
+      lastIndex = randomIndex;
+      quoteDisplay.textContent = `"${quotes[randomIndex]}"`;
+    }
+
+    // Afficher une citation dès l'ouverture
+    showRandomQuote();
+
+    // Changer de citation au clic sur le bouton
+    btnNewQuote.addEventListener('click', showRandomQuote);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+  :root {
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --primary-color: #d48c70;
+    --primary-dark: #b56c50;
+    --text-main: #2c2827;
+    --text-muted: #7a7270;
+    --accent-bg: #fcf4f0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3e9e4;
+    background-image: url(IMG_2426.jpeg);
+    background-size: cover;
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 4vw;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 6vw;
+    padding: 4vh 6vw;
+    box-shadow: 0 1.5vh 4vh rgba(44, 40, 39, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5vh 3vw;
+    border-radius: 50px;
+    margin-bottom: 0.5vh;
+    letter-spacing: 0.5px;
+    align-self: center;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 1vh;
+  }
+
+  /* Carte de citation interactive */
+  .quote-card {
+    background: var(--accent-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 3vh 5vw;
+    border-radius: 3vw;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5vh 1.5vh rgba(212, 140, 112, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .quote-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 1vh;
+  }
+
+  /* Bouton pour changer de citation */
+  .next-quote-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1.5vh 6vw;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 0.8vh 2vh rgba(212, 140, 112, 0.3);
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .next-quote-btn:active {
+    transform: scale(0.95);
+    background: var(--primary-dark);
+  }
+
+  /* Lien de retour vers le jukebox */
+  .back-link {
+    margin-top: 1vh;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--primary-dark);
+  }

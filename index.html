@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You & Always You</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="jukebox-container">
+    <header class="header">
+      <span class="badge">Love you.🤍</span>
+      <h1>Les chansons qui me font penser à toi!</h1>
+    </header>
+
+   
+    <section class="player-visual">
+      <video id="track-video" class="track-video" autoplay muted loop playsinline></video>
+    </section>
+
+   
+    <section class="track-info">
+      <h2 id="track-title">Titre de la chanson</h2>
+      <p id="track-artist">Artiste</p>
+    </section>
+
+   
+    <section class="progress-section">
+      <div class="progress-bar-container" id="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="time-stamps">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+
+    <!-- Contrôles simplifiés (uniquement Précédent / Suivant) -->
+    <section class="controls">
+      <button id="prev-btn" class="control-btn" aria-label="Précédent">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
+      <button id="next-btn" class="control-btn" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+      </button>
+    </section>
+
+    <!-- Carte souvenir associée -->
+    <section class="memory-card">
+      <div class="memory-header">
+        <span>💌</span>
+      </div>
+      <p id="track-memory" class="memory-text">Chargement du souvenir...</p>
+    </section>
+
+    <!-- Liste des pistes -->
+    <section class="playlist-drawer">
+      <h3>La Playlist (<span id="track-count">0</span>)</h3>
+      <ul id="playlist-list" class="playlist-list"></ul>
+    </section>
+    
+    <div style="text-align: center; margin-top: 1.5vh;">
+      <a href="index2.html" style="font-size: 0.78rem; color: #b56c50; text-decoration: none; font-weight: 500;">✨ Appuie ici ce n'est pas fini!</a>
+    </div>
+    
+  </main>
+
+  <!-- Balise audio invisible pour la musique -->
+  <audio id="audio-player"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
